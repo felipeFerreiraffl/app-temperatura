@@ -1,0 +1,19 @@
+.local {
+    background-color: #FFDEAD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.local-botao {
+    font-size: 15px;
+    padding: 5px;
+    width: fit-content;
+    border: solid 3px black;
+    border-radius: 10px;
+}

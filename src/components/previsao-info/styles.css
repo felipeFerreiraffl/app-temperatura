@@ -1,0 +1,18 @@
+.previsao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 230px;
+}
+
+.previsao-dia {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.previsao-temp {
+    font-size: 35px;
+    font-weight: bold;
+}

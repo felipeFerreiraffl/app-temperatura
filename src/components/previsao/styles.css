@@ -1,0 +1,21 @@
+.previsao-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.previsao-card-titulo {
+    font-size: 23px;
+}
+
+.previsao-card-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
