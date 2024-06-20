@@ -14,7 +14,7 @@ export function searchWeather(cidade, setInfo) {
         }
 
         // A informação por padrão vem minúscula
-        const descLowerCase = dados.weather[0].description
+        const descLowerCase = dados.weather[0].description;
         // Com isso, a primeira letra da descrição vem maiúscula
         const mainDesc = descLowerCase[0].toUpperCase() + descLowerCase.slice(1);
 

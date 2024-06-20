@@ -1,25 +1,19 @@
 import './App.css';
-import { EstadoCard } from "./components/estado/index";
-import { PrevisaoCard } from './components/previsao';
-import { Resposta } from "./components/resposta/index";
-import { useState } from 'react';
+import { Details } from './components/details';
+import { Home } from './components/home';
+
+import { Link } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
-  const [dados, setDados] = useState({
-    nome: '...',
-    temp: '0°C',
-    desc: '...'
-  });
-
-  const [previsao, setPrevisao] = useState([]);
-
   return (
     <div className="App">       
-      <div className='card'>
-        <EstadoCard setDados={setDados} setPrevisao={setPrevisao} />
-        <Resposta dados={dados} />
-      </div>
-      <PrevisaoCard dados={previsao} />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Home />} path='/' />
+          <Route element={<Details />} path='/detalhes' />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

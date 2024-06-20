@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./styles.css"
-import { searchWeather } from "../../scripts/buscar-dados"
+import { searchWeather } from "../../../scripts/buscar-dados"
 import { Input } from "../input";
-import { buscarDiaSemana } from "../../scripts/buscar-prev";
+import { buscarDiaSemana } from "../../../scripts/buscar-prev";
 
 export function EstadoCard({ setDados, setPrevisao }) {
     const [local, setLocal] = useState('');

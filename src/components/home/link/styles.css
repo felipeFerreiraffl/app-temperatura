@@ -1,0 +1,25 @@
+.link-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+.link-container {
+    background-color: #98FB98;
+    padding: 7px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.link-container:hover {
+    padding: 13px;
+}
+
+.link-text {
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
