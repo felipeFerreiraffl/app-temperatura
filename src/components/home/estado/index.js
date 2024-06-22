@@ -3,8 +3,9 @@ import "./styles.css"
 import { searchWeather } from "../../../scripts/buscar-dados"
 import { Input } from "../input";
 import { buscarDiaSemana } from "../../../scripts/buscar-prev";
+import { aditionalInfo } from "../../../scripts/buscar-details";
 
-export function EstadoCard({ setDados, setPrevisao }) {
+export function EstadoCard({ setDados, setPrevisao, getDados }) {
     const [local, setLocal] = useState('');
 
     const clickButton = () => {
@@ -15,6 +16,7 @@ export function EstadoCard({ setDados, setPrevisao }) {
 
         searchWeather(local, setDados);
         buscarDiaSemana(local, setPrevisao);
+        aditionalInfo(local, getDados);
     }
 
     return(

@@ -22,8 +22,8 @@ export function Home() {
             <EstadoCard setDados={setDados} setPrevisao={setPrevisao} />
             <Resposta dados={dados} />
           </div>
-          <PrevisaoCard dados={previsao} />
           <HomeLink />
+          <PrevisaoCard dados={previsao} />
         </div>
       );
 }
