@@ -4,9 +4,11 @@ import { searchWeather } from "../../../scripts/buscar-dados"
 import { Input } from "../input";
 import { buscarDiaSemana } from "../../../scripts/buscar-prev";
 import { aditionalInfo } from "../../../scripts/buscar-details";
+import { useNavigate } from "react-router-dom";
 
-export function EstadoCard({ setDados, setPrevisao, getDados }) {
+export function EstadoCard({ setDados, setPrevisao, setAdicional }) {
     const [local, setLocal] = useState('');
+    const navigate = useNavigate();
 
     const clickButton = () => {
         if (!local.trim()) {
@@ -16,7 +18,9 @@ export function EstadoCard({ setDados, setPrevisao, getDados }) {
 
         searchWeather(local, setDados);
         buscarDiaSemana(local, setPrevisao);
-        aditionalInfo(local, getDados);
+        aditionalInfo(local, infoAdd => {
+            setAdicional(infoAdd);
+        });
     }
 
     return(

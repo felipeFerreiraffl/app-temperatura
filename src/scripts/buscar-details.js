@@ -9,10 +9,10 @@ export function aditionalInfo(cidade, getInfo) {
     .then(dados =>{
         // Caso os dados não sejam colocados corretamente ou dê problema na rede ou API
         if (dados.cod !== 200) {
-            throw new Error(dados.message);
+            throw new console.error(dados.message);
         }
 
-        getInfo({
+        const info = ({
             pais: dados.sys.country,
             tempMin: dados.main.temp_min + "°C",
             tempMax: dados.main.temp_max + "°C",
@@ -20,6 +20,9 @@ export function aditionalInfo(cidade, getInfo) {
             long: dados.coord.lon + "°",
             lat: dados.coord.lat + "°"
         })
+
+        console.log('Dados: ' + info);
+        getInfo(info);
 
     })
     .catch(erro => {

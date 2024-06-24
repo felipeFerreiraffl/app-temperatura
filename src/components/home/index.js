@@ -5,7 +5,6 @@ import { Resposta } from "./resposta";
 import { useState } from "react";
 import { HomeLink } from "./link";
 
-import { Link } from "react-router-dom";
 
 export function Home() {
     const [dados, setDados] = useState({
@@ -15,14 +14,15 @@ export function Home() {
       });
     
       const [previsao, setPrevisao] = useState([]);
+      const [adicional, setAdicional] = useState(null);
     
       return (
         <div>       
           <div className='card'>
-            <EstadoCard setDados={setDados} setPrevisao={setPrevisao} />
+            <EstadoCard setDados={setDados} setPrevisao={setPrevisao} setAdicional={setAdicional} />
             <Resposta dados={dados} />
           </div>
-          <HomeLink />
+          { adicional && <HomeLink state={{ dados: adicional }} /> }
           <PrevisaoCard dados={previsao} />
         </div>
       );
