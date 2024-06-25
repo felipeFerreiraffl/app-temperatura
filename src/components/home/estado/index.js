@@ -19,6 +19,8 @@ export function EstadoCard({ setDados, setPrevisao, setAdicional }) {
         searchWeather(local, setDados);
         buscarDiaSemana(local, setPrevisao);
         aditionalInfo(local, infoAdd => {
+            // Colocar os dados na página "/detalhes"
+            // Ao clicar no botão, a opção de link aparece
             setAdicional(infoAdd);
         });
     }

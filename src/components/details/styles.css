@@ -1,0 +1,14 @@
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+h1 {
+    background-color: #98FB98;
+    padding: 15px;
+    border-radius: 20px;
+}

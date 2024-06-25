@@ -2,19 +2,13 @@ import "./styles.css"
 import { EstadoCard } from "./estado";
 import { PrevisaoCard } from "./previsao";
 import { Resposta } from "./resposta";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HomeLink } from "./link";
+import { WeatherContext } from "./context";
 
 
 export function Home() {
-    const [dados, setDados] = useState({
-        nome: '...',
-        temp: '0°C',
-        desc: '...'
-      });
-    
-      const [previsao, setPrevisao] = useState([]);
-      const [adicional, setAdicional] = useState(null);
+    const { dados, setDados, previsao, setPrevisao, adicional, setAdicional } = useContext(WeatherContext);
     
       return (
         <div>       
@@ -22,6 +16,7 @@ export function Home() {
             <EstadoCard setDados={setDados} setPrevisao={setPrevisao} setAdicional={setAdicional} />
             <Resposta dados={dados} />
           </div>
+          {/* O link aparece depois de clicar no botão "buscar" */}
           { adicional && <HomeLink state={{ dados: adicional }} /> }
           <PrevisaoCard dados={previsao} />
         </div>

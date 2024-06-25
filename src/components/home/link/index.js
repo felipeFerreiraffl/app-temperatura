@@ -5,7 +5,7 @@ export function HomeLink({ state }) {
     return(
         <div className="link-detail">
             <div className="link-container">
-                <Link className="link-text" to={'/detalhes' } state={state}>Informações detalhadas</Link>
+                <Link className="link-text" to={'/detalhes' } state={{ dados: state }}>Informações detalhadas</Link>
             </div>
         </div>
     )

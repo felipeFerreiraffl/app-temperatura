@@ -1,0 +1,45 @@
+.info-card {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #98FB98;
+    width: 55%;
+    margin-top: 30px;
+    padding: 40px;
+    border-radius: 30px;
+    gap: 20px;
+}
+
+.info-card > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.info-comp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.info-titulo {
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: solid 2px black;
+}
+
+.info-resp {
+    width: 130px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 3px black;
+}
